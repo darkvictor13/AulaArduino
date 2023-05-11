@@ -49,7 +49,7 @@
 \author{Victor Emanuel Almeida}
 \title{Arduino}
 \subtitle{Dia 1, conceitos básicos e criando o primeiro projeto}
-\date{\today}
+\date{11 de maio de 2023}
 \institute{UNIOESTE}
 \logo{\includegraphics[height=1cm]{logo_unioeste.jpg}}
 
@@ -88,6 +88,21 @@
     \tableofcontents
 \end{frame}
 
+\section{Introdução}
+
+\begin{frame}
+    \frametitle{Questões}
+    \begin{itemize}
+        \item Quem nunca fez um projeto com Arduino?
+        \item Quem já sabe usar bem o Arduino?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Conteúdo Open software}
+    slides e sketch's disponibilizados em: \url{https://github.com/darkvictor13/AulaArduino}
+\end{frame}
+
 \begin{frame}
     \frametitle{O que é Arduino?}
 
@@ -119,6 +134,14 @@
     A seguir, serão apresentadas algumas delas
 
     \framebreak%
+
+    \begin{figure}
+        \centering
+        \includegraphics[height=.68\textheight]{arduino_nano}
+        \caption{Arduino Nano}
+    \end{figure}
+
+    \framebreak%
     \begin{figure}
         \centering
         \includegraphics[height=.68\textheight]{arduino_uno}
@@ -131,12 +154,25 @@
         \includegraphics[height=.68\textheight]{arduino_mega}
         \caption{Arduino Mega}
     \end{figure}
+\end{frame}
 
-    \framebreak%
+\begin{frame}
+    \frametitle{Partes do Arduino Mega}
+
     \begin{figure}
         \centering
-        \includegraphics[height=.68\textheight]{arduino_nano}
-        \caption{Arduino Nano}
+        \includegraphics[height=.68\textheight]{partes_arduino_mega}
+        \caption{Arduino Mega}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Pinout}
+    \begin{figure}
+        \centering
+        \includegraphics[height=.68\textheight]{Pinout-Mega2560}
+        \caption{Pinout do Arduino Mega}
     \end{figure}
 \end{frame}
 
@@ -144,6 +180,17 @@
 % Microcontrolador, portas, etc
 
 \section{Software}
+
+\begin{frame}
+    \frametitle{Ambientes de desenvolvimento}
+    \begin{itemize}
+        \item Arduino IDE\@;
+        \item PlatformIO\@;
+        \item Fazer na mão;
+        \item Outros;
+    \end{itemize}
+\end{frame}
+
 \begin{frame}
     \frametitle{Arduino IDE}
 
@@ -212,19 +259,30 @@
 
 \begin{frame}[t,fragile]
     \frametitle{Estrutura do programa}
-
     \begin{lstlisting}
 #include <Arduino.h>
 
 void setup() {
-    // put your setup code here, to run once:
+    // func executada uma vez
+    // quando o arduino liga
 }
 
 void loop() {
-    // put your main code here, to run repeatedly:
+    // func executada continuamente
+    // enquanto o arduino estiver ligado
+    // executada depois do setup
 }
     \end{lstlisting}
+\end{frame}
 
+\begin{frame}
+    \frametitle{Exemplos de programas para serem implementados}
+
+    \begin{itemize}
+        \item Hello World;
+        \item Blink LED interno;
+        \item Blink LED externo;
+    \end{itemize}
 
 \end{frame}
 
