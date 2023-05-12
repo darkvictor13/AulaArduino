@@ -8,7 +8,7 @@ void setup() {
 
 void loop() {
   Serial.print("Executei o loop ");
-  Serial.print(count);
+  Serial.print(count++);
   Serial.println(" vezes");
   delay(1000);
 }
